@@ -39,8 +39,8 @@ dependencies:
 ```
 
 # วิธีการรัน (How to Run)
-- git clone https://github.com/ANTMOD46/MobileDev.git
-- git branch pokamon 
+- git clone https://github.com/ANTMOD46/MobileDev68.git
+- cd MobileDev
 - cd advanced_app
 - flutter pub get
 - flutter run -d web-server
