@@ -168,13 +168,14 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart'; // เพิ่ม import
+import 'package:get_storage/get_storage.dart';
 import 'presentation/screens/home_screen.dart';
+import 'presentation/screens/my_teams_page.dart';
+import 'package:get/get.dart';
 
-// เปลี่ยน main() เป็น async เพื่อรอการ init ของ GetStorage
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await GetStorage.init(); // <-- เรียกใช้ GetStorage.init() ที่นี่
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -183,7 +184,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(  // แก้ตรงนี้
       title: 'Advanced App',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
       home: const HomeScreen(),

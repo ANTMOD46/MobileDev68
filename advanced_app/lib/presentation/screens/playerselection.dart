@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:get_storage/get_storage.dart';
-
+import 'my_teams_page.dart';
+import 'package:get/get.dart'; 
 // Class สำหรับ Error และ Retry
 class _ErrorRetry extends StatelessWidget {
   final String message;
@@ -402,20 +403,28 @@ class _TeamBuilderState extends State<TeamBuilder> {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('สร้างทีม'),
-        centerTitle: true,
-        backgroundColor: theme.colorScheme.primaryContainer,
-        foregroundColor: theme.colorScheme.onPrimaryContainer,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('เสร็จสิ้น'),
-          ),
-        ],
+  appBar: AppBar(
+    title: const Text('สร้างทีม'),
+    centerTitle: true,
+    backgroundColor: theme.colorScheme.primaryContainer,
+    foregroundColor: theme.colorScheme.onPrimaryContainer,
+    actions: [
+      // เพิ่มปุ่มนี้เพื่อนำทางไปหน้า MyTeamsPage
+      IconButton(
+        onPressed: () {
+          Get.to(() => const MyTeamsPage());
+        },
+        icon: const Icon(Icons.shield),
+        tooltip: 'ดูทีมของฉัน',
       ),
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: const Text('เสร็จสิ้น'),
+      ),
+    ],
+  ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
           : _error != null
