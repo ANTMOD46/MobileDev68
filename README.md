@@ -31,6 +31,7 @@
     ```bash
     git clone https://github.com/ANTMOD46/MobileDev68.git
     cd MobileDev68
+    git switch crudpocketbase
     cd dssi_shop
     ```
 
