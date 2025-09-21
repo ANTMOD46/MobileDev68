@@ -30,6 +30,7 @@
 1.  **โคลนโปรเจกต์**:
     ```bash
     git clone https://github.com/ANTMOD46/MobileDev68.git
+    cd MobileDev68
     cd dssi_shop
     ```
 
