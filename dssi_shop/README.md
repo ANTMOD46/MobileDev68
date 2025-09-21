@@ -68,11 +68,12 @@
 5.  **แก้ไขการเชื่อมต่อ**:
     ในไฟล์ `generate_product.dart`  ให้แก้ไข  PocketBase เป็นของตัวเอง 
     
-    รัน ```
+    รัน
+    ```
     dart run scripts/generate_product.dart
     ```
 
-6.  **รันแอปพลิเคชัน**:
+7.  **รันแอปพลิเคชัน**:
     ```bash
     flutter run
     ```
