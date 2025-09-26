@@ -35,7 +35,7 @@
     cd dssi_shop
     ```
 
-1.  **ติดตั้ง Flutter**: ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้ง [Flutter SDK](https://docs.flutter.dev/get-started/install) เรียบร้อยแล้ว
+2.  **ติดตั้ง Flutter**: ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้ง [Flutter SDK](https://docs.flutter.dev/get-started/install) เรียบร้อยแล้ว
 
 2. **เขียนโมเดล** 
 
@@ -61,13 +61,19 @@
     * `imageUrl` (type: url)
 
 
-
 4.  **ติดตั้ง Dependencies**:
     ```bash
     flutter pub get
+
     ```
 
-5.  **แก้ไขการเชื่อมต่อ**:
+5.  **เปิด server**:
+    ```bash
+    
+    pocketbase.exe serve
+    ```
+    
+6.  **แก้ไขการเชื่อมต่อ**:
     ในไฟล์ `generate_product.dart`  ให้แก้ไข  PocketBase เป็นของตัวเอง 
     
     รัน
